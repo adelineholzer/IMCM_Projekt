@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		 <meta charset="utf-8" />
+		 <title>Selektoren erweitert...</title>
+		 <style type="text/css">
+		 p{
+			font-family:Arial;
+			color:blue;
+		 }
+		 p > em {
+			color:green; /*selektiert alle em-Elemente, die ein Kind von p sind!*/
+		 }
+		 
+		  p  em {
+			color:pink; /*selektiert alle em-Elemente, die ein Nachfahre von p sind!*/
+		 }
+		 
+		 h1 + p {
+			font-weight:bold;
+		 }
+		 h1 ~ p {
+			color:red;
+		 }
+		 </style>
+	</head>
+
+	<body>
+		<h1>Kindselektor <em>hallo</em></h1>
+		<p>
+			<em>Dieses</em> Beispiel demonstriert den Kindselektor
+		</p>
+		
+		<h1>Nachfahrenselektor</h1>
+		
+		<p>
+			<span><em>Dieses</em></span> Beispiel demonstriert den Nachfahrenselektor
+		</p>
+		
+		<h1>Nachbarselektor</h1>
+		<p>1. Absatz</p>
+		<p>2. Absatz</p>
+		<p>3. Absatz</p>
+		
+		<h1>Geschwisterselektor</h1>
+		<p>1. Absatz</p>
+		<p>2. Absatz</p>
+		<a href="https://www.google.at/">Google</a>
+		<p>3. Absatz</p>
+	</body>
+
+</html>
